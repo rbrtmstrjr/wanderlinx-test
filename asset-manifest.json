@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wanderlinx-test/static/css/main.5fbadd36.css",
+    "main.js": "/wanderlinx-test/static/js/main.085689e9.js",
+    "index.html": "/wanderlinx-test/index.html",
+    "main.5fbadd36.css.map": "/wanderlinx-test/static/css/main.5fbadd36.css.map",
+    "main.085689e9.js.map": "/wanderlinx-test/static/js/main.085689e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fbadd36.css",
+    "static/js/main.085689e9.js"
+  ]
+}
