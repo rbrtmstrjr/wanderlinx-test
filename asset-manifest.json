@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/wanderlinx-test/static/css/main.946ae8cb.css",
-    "main.js": "/wanderlinx-test/static/js/main.085689e9.js",
+    "main.css": "/wanderlinx-test/static/css/main.1cf9c60c.css",
+    "main.js": "/wanderlinx-test/static/js/main.e647310c.js",
     "index.html": "/wanderlinx-test/index.html",
-    "main.946ae8cb.css.map": "/wanderlinx-test/static/css/main.946ae8cb.css.map",
-    "main.085689e9.js.map": "/wanderlinx-test/static/js/main.085689e9.js.map"
+    "main.1cf9c60c.css.map": "/wanderlinx-test/static/css/main.1cf9c60c.css.map",
+    "main.e647310c.js.map": "/wanderlinx-test/static/js/main.e647310c.js.map"
   },
   "entrypoints": [
-    "static/css/main.946ae8cb.css",
-    "static/js/main.085689e9.js"
+    "static/css/main.1cf9c60c.css",
+    "static/js/main.e647310c.js"
   ]
 }
