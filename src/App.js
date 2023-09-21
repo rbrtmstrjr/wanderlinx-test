@@ -77,14 +77,14 @@ export default function App() {
             industry. We specialize in creating a brand that sets you apart from
             the competition.
           </p>
-          <div className="flex gap-2 lg:gap-5">
+          <div className="flex flex-col md:flex-row gap-2 lg:gap-5">
             <a href="#pricing">
-              <button className="hover:bg-primary transition duration-700 px-8 py-3 border-2 border-blue-400 bg-blue-400 text-white font-primary text-base lg:text-xl font-medium rounded-md">
+              <button className="w-full md:w-auto hover:bg-primary transition duration-700 px-8 py-3 border-2 border-blue-400 bg-blue-400 text-white font-primary text-base lg:text-xl font-medium rounded-md">
                 Get Started
               </button>
             </a>
             <a href="#systemWorks">
-              <button className="px-8 py-3 border-2 border-primary text-primary font-primary text-base lg:text-xl font-medium rounded-md">
+              <button className="w-full md:w-auto px-8 py-3 border-2 border-primary text-primary font-primary text-base lg:text-xl font-medium rounded-md">
                 See how it works
               </button>
             </a>
@@ -188,7 +188,7 @@ export default function App() {
       </section>
 
       <section className="p-3 md:px-6 lg:px-20 pt-6 md:pt-32 flex flex-col-reverse md:flex-row">
-        <aside className="animate__animated animate__fadeInLeft w-full md:w-1/2 flex flex-col gap-3 lg:gap-6">
+        <aside className="animate__animated animate__fadeInLeft w-full md:w-1/2 flex flex-col justify-center gap-3 lg:gap-6">
           <h1 className="text-3xl md:text-4xl lg:text-6xl leading-tight font-bold font-primary text-primary">
             Providing a business partner for you.
           </h1>
