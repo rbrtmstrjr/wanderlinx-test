@@ -1,4 +1,4 @@
-// import "animate.css";
+import "animate.css";
 import { useState } from "react";
 
 export default function App() {
@@ -20,19 +20,19 @@ export default function App() {
 
   return (
     <div className="overflow-hidden">
-      <nav className="z-30 px-4 md:px-8 lg:px-20 fixed top-0 left-0 right-0 bg-white/50 shadow-none backdrop-blur-xl py-3 flex justify-between">
+      <nav className="z-30 px-4 md:px-8 lg:px-20 xl:px-72 fixed top-0 left-0 right-0 bg-lighter/50 shadow-none backdrop-blur-xl py-3 flex justify-between">
         <img src={`${image_url}wanderLinxLogo.png`} alt="" className="w-40" />
         <div
           className="lg:hidden flex flex-col gap-1 justify-center"
           onClick={toggleSideBar}
         >
-          <div className="w-6 bg-primary h-1"></div>
-          <div className="w-4 bg-primary h-1"></div>
-          <div className="w-6 bg-primary h-1"></div>
+          <div className="w-6 bg-primary/50 h-1"></div>
+          <div className="w-4 bg-primary/50 h-1"></div>
+          <div className="w-6 bg-primary/50 h-1"></div>
         </div>
         <div className="hidden lg:flex justify-center items-center gap-10 font-primary text-lg font-medium text-tertiary">
           {navigationLink.map((nav) => (
-            <a href={nav.id} key={nav.id}>
+            <a href={nav.id} key={nav.id} onClick={toggleSideBar}>
               {nav.name}
             </a>
           ))}
@@ -49,7 +49,7 @@ export default function App() {
             </div>
             <div className="p-8 flex flex-col gap-8">
               {navigationLink.map((nav) => (
-                <a href={nav.id} key={nav.id}>
+                <a href={nav.id} key={nav.id} onClick={toggleSideBar}>
                   {nav.name}
                 </a>
               ))}
@@ -65,7 +65,7 @@ export default function App() {
 
       <main
         id="home"
-        className="p-3 md:px-6 lg:px-20 pt-28 lg:pt-32 bg-gradient-to-b from-slate-200 to-white flex flex-col-reverse md:flex-row"
+        className="p-3 md:px-6 lg:px-20 xl:px-72 pt-28 lg:pt-32 bg-gradient-to-b from-lighter to-white flex flex-col-reverse md:flex-row"
       >
         <aside className="animate__animated animate__fadeInRight w-full lg:w-1/2 flex flex-col justify-center gap-4 lg:gap-8">
           <h1 className="text-3xl md:text-4xl lg:text-6xl leading-tight font-bold font-primary text-primary">
@@ -77,14 +77,14 @@ export default function App() {
             industry. We specialize in creating a brand that sets you apart from
             the competition.
           </p>
-          <div className="flex flex-col md:flex-row gap-2 lg:gap-5">
+          <div className="flex gap-2 lg:gap-5">
             <a href="#pricing">
-              <button className="w-full md:w-auto hover:bg-primary transition duration-700 px-8 py-3 border-2 border-blue-400 bg-blue-400 text-white font-primary text-base lg:text-xl font-medium rounded-md">
+              <button className="hover:bg-primary transition duration-700 px-8 py-3 border-2 border-blue-400 bg-blue-400 text-white font-primary text-base lg:text-xl font-medium rounded-md">
                 Get Started
               </button>
             </a>
             <a href="#systemWorks">
-              <button className="w-full md:w-auto px-8 py-3 border-2 border-primary text-primary font-primary text-base lg:text-xl font-medium rounded-md">
+              <button className="px-8 py-3 border-2 border-primary text-primary font-primary text-base lg:text-xl font-medium rounded-md">
                 See how it works
               </button>
             </a>
@@ -95,7 +95,7 @@ export default function App() {
         </aside>
       </main>
 
-      <section className="animate__animated animate__fadeInUp px-4 md:px-6 lg:px-20 py-12 md:py-20 flex flex-col md:flex-row flex-wrap">
+      <section className="animate__animated animate__fadeInUp px-4 md:px-6 lg:px-20 xl:px-72 py-12 md:py-20 flex flex-col md:flex-row flex-wrap">
         <div className="w-full md:w-1/2 lg:w-1/4 flex flex-col items-center">
           <img
             src={`${image_url}user_friendly_icon.png`}
@@ -156,13 +156,13 @@ export default function App() {
 
       <section
         id="aboutUs"
-        className="p-3 md:px-6 lg:px-20 pt-6 md:pt-32 flex flex-col md:flex-row"
+        className="p-3 md:px-6 lg:px-20 xl:px-72 pt-6 md:pt-32 flex flex-col md:flex-row"
       >
         <aside className="animate__animated animate__fadeInRight w-full md:w-1/2 flex justify-center items-center pr-10">
           <img
             src={`${image_url}challenge_manager.png`}
             alt=""
-            className="w-full"
+            className="w-4/5"
           />
         </aside>
 
@@ -187,8 +187,8 @@ export default function App() {
         </aside>
       </section>
 
-      <section className="p-3 md:px-6 lg:px-20 pt-6 md:pt-32 flex flex-col-reverse md:flex-row">
-        <aside className="animate__animated animate__fadeInLeft w-full md:w-1/2 flex flex-col justify-center gap-3 lg:gap-6">
+      <section className="p-3 md:px-6 lg:px-20 xl:px-72 pt-6 md:pt-32 flex flex-col-reverse md:flex-row items-center">
+        <aside className="animate__animated animate__fadeInLeft w-full md:w-1/2 flex flex-col gap-3 lg:gap-6">
           <h1 className="text-3xl md:text-4xl lg:text-6xl leading-tight font-bold font-primary text-primary">
             Providing a business partner for you.
           </h1>
@@ -216,14 +216,14 @@ export default function App() {
           <img
             src={`${image_url}providing_business.png`}
             alt=""
-            className="w-full mb-4"
+            className="w-4/5 mb-4"
           />
         </aside>
       </section>
 
       <section
         id="systemWorks"
-        className="animate__animated animate__fadeIn px-4 md:px-6 lg:px-20 pt-12 md:pt-32"
+        className="animate__animated animate__fadeIn px-4 md:px-6 lg:px-20 xl:px-72 pt-12 md:pt-32"
       >
         <h1 className="text-3xl md:text-4xl lg:text-6xl leading-tight font-bold font-primary text-primary">
           How does our system work
@@ -236,7 +236,7 @@ export default function App() {
         </p>
       </section>
 
-      <section className="animate__animated animate__fadeInUp px-4 md:px-6 lg:px-20 py-12 md:py-24 flex flex-col md:flex-row gap-4 lg:gap-10">
+      <section className="animate__animated animate__fadeInUp px-4 md:px-6 lg:px-20 xl:px-72 py-12 md:py-24 flex flex-col md:flex-row gap-4 lg:gap-10">
         <div className="text-center w-full md:w-1/3 bg-gradient-to-b from-slate-100 to-white px-4 py-10 rounded-xl flex flex-col gap-4 items-center">
           <img
             src={`${image_url}book_flight.png`}
@@ -283,10 +283,10 @@ export default function App() {
         </div>
       </section>
 
-      <section className="md:px-6 lg:px-20">
+      <section className="md:px-6 lg:px-20 xl:px-72">
         <main className="bg-gradient-to-b from-light to-slate-200 px-4 md:px-6 py-16 md:py-16 rounded-none md:rounded-2xl flex flex-col md:flex-row gap-10">
           <aside className="animate__animated animate__fadeInRight w-full md:w-1/2 flex justify-center items-center">
-            <img src={`${image_url}advantage.png`} alt="" className="w-full" />
+            <img src={`${image_url}advantage.png`} alt="" className="w-11/12" />
           </aside>
 
           <aside className="animate__animated animate__fadeInLeft w-full md:w-1/2 flex flex-col justify-center gap-3 lg:gap-6">
@@ -350,7 +350,7 @@ export default function App() {
 
       <section
         id="features"
-        className="animate__animated animate__fadeIn px-4 md:px-6 lg:px-20 pt-12 md:pt-24"
+        className="animate__animated animate__fadeIn px-4 md:px-6 lg:px-20 xl:px-72 pt-12 md:pt-24"
       >
         <h1 className="text-3xl md:text-4xl lg:text-6xl leading-tight font-bold font-primary text-primary">
           Our key feature
@@ -362,7 +362,7 @@ export default function App() {
         </p>
       </section>
 
-      <section className="animate__animated animate__fadeInUp px-4 md:px-6 lg:px-20 pt-12 md:pt-20 flex">
+      <section className="animate__animated animate__fadeInUp px-4 md:px-6 lg:px-20 xl:px-72 pt-12 md:pt-20 flex">
         <div className="columns:1 md:columns-2">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-6 md:mb-12">
             <img
@@ -472,7 +472,7 @@ export default function App() {
         </div>
       </section>
 
-      <section className="animate__animated animate__fadeInUp px-4 md:px-6 lg:px-20 pt-12 md:pt-20 flex flex-col md:flex-row">
+      <section className="animate__animated animate__fadeInUp px-4 md:px-6 lg:px-20 xl:px-72 pt-12 md:pt-20 flex flex-col md:flex-row">
         <aside className="text-center w-full md:w-1/2 bg-lighter p-8 lg:p-16 rounded-xl flex flex-col gap-4 items-center mb-8 md:mb-0 md:mr-6">
           <h2 className="text-2xl md:text-3xl font-primary text-primary font-bold">
             Dashboard Account
@@ -506,7 +506,7 @@ export default function App() {
 
       <section
         id="faqs"
-        className="px-4 md:px-6 lg:px-20 pt-12 md:pt-24 flex flex-col items-center"
+        className="px-4 md:px-6 lg:px-20 xl:px-72 pt-12 md:pt-24 flex flex-col items-center"
       >
         <h1 className="text-3xl md:text-4xl lg:text-6xl leading-tight font-bold font-primary text-primary">
           Questions & Answers
@@ -517,7 +517,7 @@ export default function App() {
         </p>
       </section>
 
-      <section className="animate__animated animate__fadeInUp px-4 md:px-6 lg:px-20 py-12 md:py-20">
+      <section className="animate__animated animate__fadeInUp px-4 md:px-6 lg:px-20 xl:px-72 py-12 md:py-20">
         <div className="columns:1 lg:columns-2">
           <article className="flex flex-col gap-3 lg:gap-6 mb-6 md:mb-10">
             <h2 className="text-2xl lg:text-3xl font-primary text-primary font-medium">
@@ -592,7 +592,10 @@ export default function App() {
         </div>
       </section>
 
-      <section id="pricing" className="md:px-6 lg:px-20 pb-12 md:pb-20">
+      <section
+        id="pricing"
+        className="md:px-6 lg:px-20 xl:px-72 pb-12 md:pb-20"
+      >
         <main className="bg-pricing-bg bg-cover bg-no-repeat bg-fixed rounded-none md:rounded-2xl flex flex-col md:flex-row gap-4 lg:gap-10 p-4">
           <aside className="w-full md:w-3/5 md:px-8 lg:px-20 py-4 flex flex-col gap-3 lg:gap-6 justify-center">
             <h1 className="text-3xl md:text-4xl lg:text-6xl leading-tight font-medium font-primary text-white">
@@ -624,7 +627,7 @@ export default function App() {
 
       <hr className="px-20" />
 
-      <footer className="px-4 md:px-20 py-6 md:py-16">
+      <footer className="px-4 md:px-20 xl:px-72 py-6 md:py-16">
         © 2023 Wanderlinx Travel Services. All Rights Reserved
       </footer>
     </div>
