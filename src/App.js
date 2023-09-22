@@ -77,14 +77,14 @@ export default function App() {
             industry. We specialize in creating a brand that sets you apart from
             the competition.
           </p>
-          <div className="flex gap-2 lg:gap-5">
+          <div className="flex flex-col md:flex-row gap-2 lg:gap-5">
             <a href="#pricing">
-              <button className="hover:bg-primary transition duration-700 px-8 py-3 border-2 border-blue-400 bg-blue-400 text-white font-primary text-base lg:text-xl font-medium rounded-md">
+              <button className="w-full md:w-auto hover:bg-primary transition duration-700 px-8 py-3 border-2 border-blue-400 bg-blue-400 text-white font-primary text-base lg:text-xl font-medium rounded-md">
                 Get Started
               </button>
             </a>
             <a href="#systemWorks">
-              <button className="px-8 py-3 border-2 border-primary text-primary font-primary text-base lg:text-xl font-medium rounded-md">
+              <button className="w-full md:w-auto px-8 py-3 border-2 border-primary text-primary font-primary text-base lg:text-xl font-medium rounded-md">
                 See how it works
               </button>
             </a>
