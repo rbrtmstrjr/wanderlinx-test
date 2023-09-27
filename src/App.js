@@ -65,11 +65,11 @@ export default function App() {
 
       <main
         id="home"
-        className="p-3 md:px-6 lg:px-20 xl:px-20 2xl:px-72 pt-28 lg:pt-32 bg-gradient-to-b from-lighter to-white flex flex-col-reverse md:flex-row"
+        className="p-3 md:px-6 lg:px-20 xl:px-20 2xl:px-20 pt-28 lg:pt-32 bg-gradient-to-b from-lighter to-white flex flex-col-reverse md:flex-row"
       >
         <aside className="animate__animated animate__fadeInRight w-full lg:w-1/2 flex flex-col justify-center gap-4 lg:gap-8">
           <h1 className="text-3xl md:text-4xl lg:text-6xl leading-tight font-bold font-jakarta text-primary">
-            Quickly start a business with the right tools.
+            Yow start a business with the right tools.
           </h1>
           <p className="text-base lg:text-2xl text-medium font-rubik text-primary">
             Here at WanderLinx, our main goal is to help you establish a
